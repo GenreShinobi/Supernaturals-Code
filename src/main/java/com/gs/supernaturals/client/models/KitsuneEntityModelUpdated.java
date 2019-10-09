@@ -3,12 +3,13 @@ package com.gs.supernaturals.client.models;
 import com.gs.supernaturals.entity.creatures.KitsuneEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.entity.model.RendererModel;
+import net.minecraft.client.renderer.entity.model.VillagerModel;
 
 /**
  * ModelPlayer - Unakitinoneko
  * Created using Tabula 7.0.1
  */
-public class KitsuneEntityModelUpdated extends EntityModel<KitsuneEntity> {
+public class KitsuneEntityModelUpdated<T extends KitsuneEntity> extends EntityModel<T> {
     public RendererModel Chest;
     public RendererModel Abdomen;
     public RendererModel RightShoulder;
@@ -49,6 +50,7 @@ public class KitsuneEntityModelUpdated extends EntityModel<KitsuneEntity> {
     public RendererModel nose;
 
     public KitsuneEntityModelUpdated() {
+        super();
         this.textureWidth = 64;
         this.textureHeight = 64;
         this.tail3center = new RendererModel(this, 0, 30);

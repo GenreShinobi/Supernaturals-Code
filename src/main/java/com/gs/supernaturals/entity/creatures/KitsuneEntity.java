@@ -2,13 +2,17 @@ package com.gs.supernaturals.entity.creatures;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.passive.IronGolemEntity;
+import net.minecraft.entity.merchant.villager.VillagerEntity;
+import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.MerchantOffer;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class KitsuneEntity extends IronGolemEntity {
-    public KitsuneEntity(EntityType<? extends IronGolemEntity> type, World worldIn) {
+public class KitsuneEntity extends GolemEntity {
+    public KitsuneEntity(EntityType<? extends GolemEntity> type, World worldIn) {
         super(type, worldIn);
     }
 
@@ -24,7 +28,6 @@ public class KitsuneEntity extends IronGolemEntity {
         this.goalSelector.addGoal(5, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
 
-        this.targetSelector.addGoal(1, new DefendVillageTargetGoal(this));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
 

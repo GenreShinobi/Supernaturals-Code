@@ -2,6 +2,7 @@ package com.gs.supernaturals.core;
 
 import com.gs.supernaturals.effect.ModEffectInstance;
 import com.gs.supernaturals.item.weapon.Dagger;
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.block.Block;
 import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
@@ -10,6 +11,10 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.potion.*;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.feature.jigsaw.JigsawManager;
+import net.minecraft.world.gen.feature.jigsaw.JigsawPattern;
+import net.minecraft.world.gen.feature.jigsaw.SingleJigsawPiece;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -88,6 +93,4 @@ public class ModRegistry {
     public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> entityRegistryEvent) {
         entityRegistryEvent.getRegistry().register(ModEntity.KITSUNE);
     }
-
-
 }

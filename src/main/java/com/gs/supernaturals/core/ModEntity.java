@@ -7,7 +7,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModEntity {
-    @ObjectHolder("supernaturals:druid_leaf")
-    public static EntityType<?> KITSUNE = EntityType.Builder.create(KitsuneEntity::new, EntityClassification.CREATURE).build(Reference.MODID + ":kitsune_entity").setRegistryName("kitsune_entity");
+    @ObjectHolder("supernaturals:kitsune_entity")
+    public static EntityType<?> KITSUNE = EntityType.Builder.create(KitsuneEntity::new, EntityClassification.MISC).build(Reference.MODID + ":kitsune_entity").setRegistryName("kitsune_entity");
 
 }
